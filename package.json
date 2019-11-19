@@ -1,0 +1,34 @@
+{
+  "name": "yelpcamp",
+  "version": "0.0.0-development",
+  "description": "Final project for full-stack web dev course.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [
+    "ejs",
+    "express",
+    "full-stack",
+    "Nodejs",
+    "yelp-camp",
+    "web-dev"
+  ],
+  "repository": "https://github.com/joeetuso/yelpcamp.git",
+  "author": "Joseph Gattuso <joseph.gattuso@gmail.com> (https://josephgattuso.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joeetuso/yelpcamp/issues"
+  },
+  "homepage": "https://github.com/joeetuso/yelpcamp#readme",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "ejs": "2.7.2",
+    "express": "4.17.1"
+  },
+  "private": true
+}
