@@ -2,8 +2,11 @@ var express = require('express'),
   app = express(),
   bodyParser = require('body-parser'),
   mongoose = require('mongoose'),
+  passport = require('passport'),
+  LocalStrategy = require('passport-local'),
   Campground = require('./models/campground'),
-  Comment = require('./models/comment');
+  Comment = require('./models/comment'),
+  User = require('./models/user');
 
 require('dotenv').config();
 
@@ -16,7 +19,8 @@ mongoose
   .connect(mongoURI, {
     useNewUrlParser: true,
     dbName: 'test',
-    useFindAndModify: false
+    useFindAndModify: false,
+    useUnifiedTopology: true
   })
   .then(() => {
     console.log('Connected to DB!');
