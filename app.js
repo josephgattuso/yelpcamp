@@ -45,7 +45,11 @@ var campgrounds = [
 ];
 
 app.get('/', function(req, res) {
-  res.send('hello world!');
+  res.render('landing');
+});
+
+app.get('/campgrounds', function(req, res) {
+  res.render('campgrounds', { campgrounds: campgrounds });
 });
 
 // Start the remote server
