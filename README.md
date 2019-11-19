@@ -4,7 +4,7 @@ A RESTful Node.js web application that allows users to create, read, update, and
 
 ## Live Demo
 
-TODO
+Checkout the live demo: [https://yelpcamp-joeetuso.herokuapp.com](https://yelpcamp-joeetuso.herokuapp.com)
 
 ## Features
 
@@ -48,10 +48,10 @@ Some comments in the source code are course notes and therefore might seem unece
 ### Back-end
 
 - [express](https://expressjs.com/)
-
-<!-- - [mongoDB](https://www.mongodb.com/)
+- [mongoDB](https://www.mongodb.com/)
 - [mongoose](http://mongoosejs.com/)
-- [async](http://caolan.github.io/async/)
+
+<!-- - [async](http://caolan.github.io/async/)
 - [crypto](https://nodejs.org/api/crypto.html#crypto_crypto)
 - [helmet](https://helmetjs.github.io/)
 - [passport](http://www.passportjs.org/)
@@ -66,11 +66,10 @@ Some comments in the source code are course notes and therefore might seem unece
 
 ### Platforms
 
-TODO
+<!-- - [Cloudinary](https://cloudinary.com/) -->
 
-<!-- - [Cloudinary](https://cloudinary.com/)
 - [Heroku](https://www.heroku.com/)
-- [Cloud9](https://aws.amazon.com/cloud9/?origin=c9io) -->
+- [Cloud9](https://aws.amazon.com/cloud9/?origin=c9io)
 
 ## License
 
