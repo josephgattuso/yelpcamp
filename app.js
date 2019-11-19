@@ -67,11 +67,8 @@ app.get('/campgrounds/new', function(req, res) {
 });
 
 // Start the remote server
-// app.listen(process.env.PORT, process.env.IP, function() {
-//   console.log('The YelpCamp Server Has Started!');
-// });
-
-// Start the local server
-app.listen(3000, function() {
-  console.log('yelp-camp server started');
-});
+let port = process.env.PORT;
+if (port == null || port == '') {
+  port = 3000;
+}
+app.listen(port);
