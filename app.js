@@ -60,15 +60,13 @@ passport.deserializeUser(User.deserializeUser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
-app.use(expressSanitizer());
+app.use(methodOverride('_method'));
+// seedDB(); //seed the database
 
 app.use(function(req, res, next) {
   res.locals.currentUser = req.user;
   next();
 });
-
-// override with POST having ?_method=PUT or ?_method=DELETE
-app.use(methodOverride('_method'));
 
 app.use(indexRoutes);
 app.use('/campgrounds', campgroundRoutes);
