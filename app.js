@@ -10,7 +10,7 @@ var express = require('express'),
   flash = require('connect-flash');
 
 // constant for environment variables
-const PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 require('dotenv').config();
 
 // requiring routes
@@ -34,7 +34,7 @@ mongoose
     useUnifiedTopology: true
   })
   .then(() => {
-    console.log('Connected to DB!');
+    console.log('Connected to db');
   })
   .catch(err => {
     console.log('ERROR:', err.message);
@@ -72,5 +72,5 @@ app.use('/campgrounds/:id/comments', commentRoutes);
 
 // Server start!
 app.listen(PORT, () => {
-  console.log('The YelpCamp Server Has Started!');
+  console.log('Starting the YelpCamp server...');
 });
