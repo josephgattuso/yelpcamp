@@ -1,5 +1,5 @@
 // included modules
-const express = require('express'),
+var express = require('express'),
   app = express(),
   bodyParser = require('body-parser'),
   mongoose = require('mongoose'),
@@ -9,25 +9,23 @@ const express = require('express'),
   expressSanitizer = require('express-sanitizer'),
   flash = require('connect-flash');
 
-// Constant for environment variables and bindings
+// constant for environment variables
 const PORT = process.env.PORT || 3000;
+require('dotenv').config();
 
-// Models for database
-const Campground = require('./models/campground'),
-  User = require('./models/user'),
-  Comment = require('./models/comment');
-// seedDB = require('./seeds');
-// seedDB(); // Seed the database
-
-//requring routes
-const commentRoutes = require('./routes/comments'),
+// requiring routes
+var commentRoutes = require('./routes/comments'),
   campgroundRoutes = require('./routes/campgrounds'),
   indexRoutes = require('./routes/index');
 
-require('dotenv').config();
+// models for database
+var Campground = require('./models/campground'),
+  Comment = require('./models/comment'),
+  User = require('./models/user');
+// seedDB = require('./seeds');
 
-// Set up MongoDB/mongoose using ATLAS to make it server-independent (code pulled from MongoDB atlas page )
-const mongoURI = process.env.databaseURL;
+// setup mongodb database
+var mongoURI = process.env.databaseURL;
 mongoose
   .connect(mongoURI, {
     useNewUrlParser: true,
@@ -42,7 +40,7 @@ mongoose
     console.log('ERROR:', err.message);
   });
 
-// Config and init of Passport module
+// PASSPORT CONFIGURATION
 app.use(
   require('express-session')({
     secret: 'Once again Gizmo wins cutest dog!',
@@ -68,11 +66,11 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(indexRoutes);
+app.use('/', indexRoutes);
 app.use('/campgrounds', campgroundRoutes);
 app.use('/campgrounds/:id/comments', commentRoutes);
 
 // Server start!
 app.listen(PORT, () => {
-  console.log('The YelpCamp application server has started!');
+  console.log('The YelpCamp Server Has Started!');
 });
