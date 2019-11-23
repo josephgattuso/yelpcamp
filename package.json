@@ -1,7 +1,10 @@
 {
   "name": "yelpcamp",
-  "version": "0.0.0-development",
-  "description": "Final project for full-stack web dev course.",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.11.1"
+  },
+  "description": "Final project for full-stack developer course.",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
@@ -28,11 +31,13 @@
   "dependencies": {
     "body-parser": "1.19.0",
     "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
     "dotenv": "^8.2.0",
     "ejs": "2.7.4",
     "express": "4.17.1",
     "express-session": "^1.17.0",
     "method-override": "^3.0.0",
+    "moment": "^2.24.0",
     "mongoose": "^5.7.12",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>YelpCamp</title>
     <link
       rel="stylesheet"
@@ -15,7 +18,12 @@
   </head>
   <style>
     body {
-      background-color: #121212;
+      background-color: #000;
+    }
+
+    h1 {
+      font-size: 4em;
+      text-shadow: 2px 2px 10px black;
     }
 
     #landing-header {
@@ -98,23 +106,9 @@
     }
   </style>
   <body>
-    <div class="container">
-      <% if(error && error.length > 0){ %>
-      <div class="alert alert-danger" role="alert">
-        <%= error %>
-      </div>
-      <% } %> <% if(success && success.length > 0){ %>
-      <div class="alert alert-success" role="alert">
-        <%= success %>
-      </div>
-      <% } %>
-    </div>
-
     <div id="landing-header">
       <h1>Welcome to YelpCamp!</h1>
-      <a href="/campgrounds" class="btn btn-lg btn-success"
-        >View All Campgrounds</a
-      >
+      <a href="/campgrounds" class="btn btn-lg btn-default">Get Started</a>
     </div>
 
     <ul class="slideshow">
@@ -124,4 +118,5 @@
       <li></li>
       <li></li>
     </ul>
-    <% include ./partials/footer %>
+  </body>
+</html>
