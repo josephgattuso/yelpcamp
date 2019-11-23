@@ -2,11 +2,15 @@
 <html>
   <head>
     <title>YelpCamp</title>
+    <link rel="stylesheet" href="/stylesheets/main.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
   </head>
   <body>
     <nav class="navbar navbar-default">
@@ -19,14 +23,34 @@
             <% if(!currentUser){ %>
             <li><a href="/login">Login</a></li>
             <li><a href="/register">Sign Up</a></li>
+            <li>
+              <a
+                href="https://github.com/joeetuso/yelpcamp"
+                class="btn btn-default btn-sm"
+              >
+                <i class="fab fa-github"></i>
+                View Source
+              </a>
+            </li>
             <% } else { %>
-            <li><a href="#">Logged in: <%= currentUser.username %></a></li>
+            <li><a href="#">Signed In: <%= currentUser.username %></a></li>
             <li><a href="/logout">Logout</a></li>
+            <li>
+              <a
+                href="https://github.com/joeetuso/yelpcamp"
+                class="btn btn-default btn-med"
+                role="button"
+              >
+                <i class="fab fa-github"></i>
+                View Source
+              </a>
+            </li>
             <% } %>
           </ul>
         </div>
       </div>
     </nav>
+
     <div class="container">
       <% if(error && error.length > 0){ %>
       <div class="alert alert-danger" role="alert">
@@ -38,3 +62,5 @@
       </div>
       <% } %>
     </div>
+  </body>
+</html>
