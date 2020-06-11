@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "nodemon app.js",
     "start": "node app.js",
-    "test": "",
+    "test": ""
   },
   "keywords": [
     "ejs",
@@ -40,5 +40,5 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.1"
-  },
+  }
 }
