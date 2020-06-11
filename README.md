@@ -4,7 +4,7 @@ A RESTful Node.js web application that allows users to create, read, update, and
 
 ## Live Demo
 
-Checkout the live demo: [yelpcamp-josephgattuso.herokuapp.com](https://yelpcamp-josephgattuso.herokuapp.com)
+Checkout the live demo: <a href='https://yelpcamp-josephgattuso.herokuapp.com' target='_blank' rel='noreferrer noopener nofollow'>yelpcamp-josephgattuso.herokuapp.com</a>
 
 ## Features
 
