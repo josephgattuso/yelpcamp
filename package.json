@@ -10,8 +10,6 @@
     "dev": "nodemon app.js",
     "start": "node app.js",
     "test": "",
-    "commit": "git-cz",
-    "semantic-release": "semantic-release"
   },
   "keywords": [
     "ejs",
@@ -37,11 +35,10 @@
     "express": "4.17.1",
     "express-session": "^1.17.1",
     "method-override": "^3.0.0",
+    "mongoose": "^5.9.18",
     "moment": "^2.26.0",
-    "mongoose": "^5.7.12",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^5.0.1"
   },
-  "private": true
 }
